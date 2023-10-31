@@ -6,12 +6,17 @@ public class Paciente implements IPaciente {
     protected String nome;
     protected String cpf;
 
+    public Paciente(String nome, String cpf) {
+        this.nome = nome;
+        this.cpf = cpf;
+    }
+
     @Override
     public String getNome() {
-        return null;
+        return this.nome;
     }
     @Override
     public String getCpf() {
-        return null;
+        return this.cpf;
     }
 }

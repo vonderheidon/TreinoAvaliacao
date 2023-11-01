@@ -33,7 +33,7 @@ public class Vacina implements IVacina {
     @Override
     public boolean estaVencida() {
         try {
-            if (this.dataValidade.isAfter(LocalDate.now()) || this.dataValidade.isEqual(LocalDate.now())) {
+            if (this.dataValidade.isBefore(LocalDate.now()) || this.dataValidade.isEqual(LocalDate.now())) {
                 throw new VacinaVencidaException();
             }
         } catch (VacinaVencidaException e) {

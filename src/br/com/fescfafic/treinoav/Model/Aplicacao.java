@@ -1,26 +1,28 @@
 package br.com.fescfafic.treinoav.Model;
 
 import br.com.fescfafic.treinoav.Interface.IAplicacao;
+import br.com.fescfafic.treinoav.Interface.IPaciente;
+import br.com.fescfafic.treinoav.Interface.IVacina;
 
 import java.time.LocalDate;
 
 public class Aplicacao implements IAplicacao {
-    protected Paciente paciente;
-    protected Vacina vacina;
+    protected IPaciente paciente;
+    protected IVacina vacina;
     protected LocalDate dataAplicacao;
 
-    public Aplicacao(Paciente paciente, Vacina vacina, LocalDate dataAplicacao) {
+    public Aplicacao(IPaciente paciente, IVacina vacina, LocalDate dataAplicacao) {
         this.paciente = paciente;
         this.vacina = vacina;
         this.dataAplicacao = dataAplicacao;
     }
 
     @Override
-    public Paciente getPaciente() {
+    public IPaciente getPaciente() {
         return this.paciente;
     }
     @Override
-    public Vacina getVacina() {
+    public IVacina getVacina() {
         return this.vacina;
     }
     @Override

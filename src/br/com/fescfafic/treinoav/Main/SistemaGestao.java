@@ -25,11 +25,11 @@ public class SistemaGestao {
 
     public void registrarAplicacao(IPaciente paciente, IVacina vacina) {
         if (this.controle <= this.vetorAplicacoes.length) {
-            Aplicacao aplicacao = new Aplicacao((Paciente) paciente, (Vacina) vacina, LocalDate.now());
+            Aplicacao aplicacao = new Aplicacao(paciente, vacina, LocalDate.now());
             vetorAplicacoes[controle] = aplicacao;
             controle++;
         } else {
-            System.out.println("Cheio.");
+            System.out.println("Fichas esgotadas.");
         }
     }
     public void listarAplicacoes() {

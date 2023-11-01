@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         Vacina vacina1 = new Vacina(
                 "Influenza",
-                LocalDate.of(2023,10,31),
+                LocalDate.of(2023,11,2),
                 "300",
                 5
         );
@@ -25,5 +25,6 @@ public class Main {
         sistemaGestao.registrarAplicacao(paciente1,vacina1);
         sistemaGestao.registrarAplicacao(paciente1,vacina2);
         sistemaGestao.listarAplicacoes();
+        vacina1.estaVencida();
     }
 }
